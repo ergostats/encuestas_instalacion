@@ -11,7 +11,7 @@
 
 
 
-<title>Análisis de series de tiempo con R</title>
+<title>Encuestas con R, guía de instalación</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -2754,12 +2754,12 @@ border-radius: 0px;
 
 
 
-<h1 class="title toc-ignore">Análisis de series de tiempo: visualización y pronóstico</h1>
+<h1 class="title toc-ignore">Análisis estadístico de encuestas con R: Estudio de la Encuesta Nacional de Encuesta Nacional de Empleo, Desempleo y Subempleo (ENEMDU-INEC)</h1>
 <h3 class="subtitle">Instalación y preparación de las herramientas de
 trabajo</h3>
 <h4 class="author">Transferencia de conocimiento del Centro de Investigación Estadística
 ERGOSTATS en colaboración con el Servicio de Rentas Internas (SRI)</h4>
-<h4 class="date">Junio 15, 2023</h4>
+<h4 class="date">Julio 14, 2023</h4>
 
 </div>
 
@@ -2789,12 +2789,12 @@ text-align: center;
 <style> body {text-align: justify} </style>
 <div id="introducción" class="section level2">
 <h2>Introducción</h2>
-<p>Bienvenidos al espacio de transferencia de conocimientos <strong>Análisis de series de tiempo: visualización y pronóstico</strong>. Durante 120 minutos vamos a revisar algunas alternativas para
-  contrastar los resultados de los pronósticos de las ventas gravadas de los contribuyentes del Ecuador. Este taller te será util para 
-  que puedas aprovechar la información de corte temporal en tus activdades profesionales dentro de la Administración Tributaria. 
+<p>Bienvenidos al espacio de transferencia de conocimientos <strong>Análisis estadístico de encuestas con R: Estudio de la Encuesta Nacional de Encuesta Nacional de Empleo, Desempleo y Subempleo (ENEMDU-INEC)</strong>. Durante 120 minutos vamos a revisar 
+  las herramientas disponibles en el lenguaje de programación R para realizar un análisis estadístico robusto con información disponible en la ENEMDU. Esta transferencia de conocimientos te será útil para realizar inferencias sobre una población
+a partir de una muestra representativa. Recordemos que en los casos en que observar a toda una población resulta costoso, empleamos técnicas de selección de muestras, en la transferencia de conocimientos abordaremos también los conceptos clave para la inferencia estadística a partir de muestras. 
   
   <br>
-A continuación un enlace de recursos que el Centro de Investigación Estadística ERGOSTATS pone a disposición del público:</p>
+A continuación te dejamos un enlace de recursos que el Centro de Investigación Estadística ERGOSTATS pone a disposición del público:</p>
   
  <p> <a href="https://linktr.ee/ergostats">Recursos y materailes ERGOSTATS</a></p>
   
@@ -2819,7 +2819,7 @@ estudiantes.</p>
 <p>Para instalar R- Base es necesario saber si nuestro computador es de
 32 o 64 bits. Una vez resuelta esta duda, procederemos a hacer clic en el
 siguiente enlace:</p>
-<p><a href="https://cran.r-project.org/bin/windows/base/R-4.3.0-win.exe">Instalador
+<p><a href="https://cran.r-project.org/bin/windows/base/">Instalador
 de R desde CRAN</a></p>
 <p>Este nos dará la descarga de un archivo <code>.exe</code>. Una vez
 descargado, empezamos la instalación:</p>
@@ -2859,16 +2859,23 @@ instalación.</p>
 </div>
 <div id="instalación-de-librerias-de-r" class="section level2">
 <h2>Instalación de librerias de R</h2>
-<p>Con estas dos herramientas instaladas, en la consola de RStudio
+  
+<p>Previo a instalar las librerias nos vamos a Rstudio y buscamos el menu <b>Tools > Global options > Packages</b> y retiramos deseleccionamos las casillas: "Use secure download method for HTTP" y "use Internet Explorer
+  library/proxy for HTTP", al final la ventana debe verse de la siguiente manera:</p>
+
+  <img src="packages.png" alt="Menu de paquetes en RStudio">
+  
+ <p> Con esto nos asrguramos que podamos realizar la instalacion de las librerias sin inconvenientes.</p>
+<p>Ahora estamos listos para instalar las librerias, en la consola de RStudio
 enviamos la siguiente sentencia:</p>
-<pre class="r"><code>install.packages(c(&quot;tidyverse&quot;,&quot;fable&quot;,&quot;tsibble&quot;,&quot;lubridate&quot;,&quot;feasts&quot;))</code></pre>
+<pre class="r"><code>install.packages(c(&quot;tidyverse&quot;,&quot;srvyr&quot;,&quot;broom&quot;))</code></pre>
 </div>
 <div id="preguntas-y-comentarios" class="section level2">
 <h2>Preguntas y comentarios</h2>
 <p>Si tienes problemas con la instalación puedes escribir un correo
 a:</p>
 <ul>
-<li><p>Alex Bajaña instructor del taller (<a href="alexvbr@ergostats.org">alexvbr@ergostats.org</a> )</p></li>
+<li><p>Alex Bajaña instructor de la transferencia de conocimeintos (<a href="alexvbr@ergostats.org">alexvbr@ergostats.org</a> )</p></li>
 </ul>
 </div>
 
